@@ -1,5 +1,5 @@
 # Lean UX Platform
-[![Version](https://img.shields.io/badge/mining%20minds-version%202.5-green.svg)](http://uclab.khu.ac.kr/LeanUX/)
+[![Version](https://img.shields.io/badge/LeanUXPlatfrom-version%202.5-green.svg)](http://uclab.khu.ac.kr/LeanUX/)
 [![License](https://img.shields.io/badge/Apache%20License%20-Version%202.0-yellowgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 <!--Lean UX Platform combines the different measurements using Mixed-Method approach to acquire the complete picture of user emotional experience-->
