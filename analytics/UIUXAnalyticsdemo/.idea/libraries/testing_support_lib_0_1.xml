@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="testing-support-lib-0.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/2c234877e52a7f99428a76de3ed9cc9b3baeab31/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/2c234877e52a7f99428a76de3ed9cc9b3baeab31/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/test/testing-support-lib/0.1/testing-support-lib-0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

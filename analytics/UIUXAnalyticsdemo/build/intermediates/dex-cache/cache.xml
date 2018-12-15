@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="048390e919a4cb1194609dd5c32883d6c5cf46a9">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_479cc8d97e0c108a4392c06a0ff7449384c848e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\f4eb51e85c912faa8514767ee60154019dd62b6d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e3ea9cd49145ecc49598d47ade5bdd3addc799a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\c0b5729fd83b295ae527d5705c062656ede5f831\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_631e7b53be6e64e97067d48f88e174d39d098f18\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\c9b5e5c991b714ecf6d278bacd5075afc85c5bba\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_619ee2bf9b14c7d810897c3d0178f477eef45004\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\1f5df47d8a49804d6de0cb0de7b27997163f2aa4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aba9abcfe7ce6d935add115f5ce20254b037d583">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_34b2066145e50110923e6ebb0f7137ab17dc0737\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\c0b5729fd83b295ae527d5705c062656ede5f831\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_eea2b70a37ef5e2191e2ade628b778f1ac9176fd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\732841bc393ceb03796fa11e1fc7e25999c84331\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_035fb3a45fcea1d34291c72523ca3fdb4ccb4254\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\327135bf9e40d2cccfe74136aaaea0d703c3b8da\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e40b9a81989bd4a846018551c280f8c4d837bf2e">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a360428841218269bb6d3402d4b20453b2a24b64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_c1ab3ec8c3ed641c851e963864839d02adbe5ef3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\98e649b581946ba85fd1ce7f02003190893981be\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_74fa2de54bfa7cfbd6be0d773429eadb015e3040\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f0b3572fe37f79c59b1305a31454a997e8b2397a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jamil\.android\build-cache\5d2f7214a9d766b8bc20806299b89da8cbdfcc4a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="C:\Users\Jamil\Dropbox\LEAN UX Platform Project\leanuxplatform\analytics\UIUXAnalyticsdemo\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_625f6c2b5a6b16b3e4f35876118d3a6fcfb30429\classes.dex" />
+    </item>
+
+</items>
