@@ -1,8 +1,8 @@
-#  UI/UX Authoring Tool
+#  Interaction Tracker
 
 <!-- make your own badges from here: http://shields.io/ -->
-[![Version](https://img.shields.io/badge/MM__SL__UI/UX-V2.5-ff69b4.svg)](http://www.miningminds.re.kr/english/)
-![License](https://img.shields.io/badge/Apache%20License%20-Version%202.0-yellowgreen.svg)
+[![Version](https://img.shields.io/badge/LeanUXPlatfrom-version%202.5-green.svg)](http://uclab.khu.ac.kr/LeanUX/)
+[![License](https://img.shields.io/badge/Apache%20License%20-Version%202.0-yellowgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 --------------------------
 <!-- Update the list and the main body. -->
@@ -10,14 +10,14 @@
 This document describes how to get started using the UI/UX Authoring tool Tracking SDK for Android. UI/UX Authoring tool is open source UX engine that gives you valuable insights into your application user, and much more, so you can optimize your strategy and experience of your application user.
 
 
-- [1. UI/UX Authoring Tool Android Tracking SDK](#1-uiux-authoring-tool-android-tracking-sdk)
+- [1. Interaction Tracker Android Tracking SDK](#1-uiux-authoring-tool-android-tracking-sdk)
     - [1.1 Getting Started](#11-getting-started)
     - [1.2 Include Library](#12-include-library)
     - [1.3 Initialize Tracker](#13-initialize-tracker)
     - [1.4 Tracker Usage](#14-tracker-usage)
     
    
-- [2. UI/UX Authoring Tool Web Interface](#2-uiux-authoring-tool-web-interface)
+- [2. Lean UX Platform- Interaction Tracker Web Interface](#2-uiux-authoring-tool-web-interface)
     - [2.1 Installation](#21-installation)
     - [2.2 Dependencies](#22-dependencies)
     - [2.3 Run Migrations](#23-run-migrations)
@@ -32,11 +32,11 @@ This document describes how to get started using the UI/UX Authoring tool Tracki
 
 <!-- Main Body of the Document -->
 
-## 1. UI/UX Authoring Tool Android Tracking SDK
+## 1. Interaction Tracker Android Tracking SDK
 
 ### 1.1 Getting Started
 
-Integrating UI/UX Authoring tool tracking into your Android app
+Integrating Interaction tracker into your Android app
 
 ### 1.2 Include Library
 Import the uiuxanalytics library into your Android app, then add this to your app build.gradle file: check the UIUXAnalyticsdemo as sample
@@ -113,10 +113,10 @@ Allow to collect the data based on user id
 
 ## 2. UI/UX Authoring Tool Web Interface
 
-UI/UX Authoring tool is web based UX engine that collects the user app usage behavior data by integrating the SDK in android applications. This is Django package, you must install Django befor using this package.
+Lean UX Engine having Interaction Tracker is web based UX engine that collects the user app usage behavior data by integrating the SDK in android applications. This is Django package, you must install Django befor using this package.
 
 ### 2.1. Installation
-To get started with UI/UX Authoring tool analytics, the package must first be dowloaded from the repo then access the dowloaded folder via command line then run the follow command
+To get started with Lean UX Engine having Interaction Tracker analytics, the package must first be dowloaded from the repo then access the dowloaded folder via command line then run the follow command
 
        pip install -r requirements.txt
 
@@ -138,11 +138,11 @@ In this implementation, we are contributing a Django Analytics for Andoird appli
 # 4. Authors
 
 * Name : Jamil Hussain ,   email : jamil@oslab.khu.ac.kr.
-* Name : Anees ul Hassan , email : anees@oslab.khu.ac.kr.
+* Name : Muhammad Zaki Ansaar , email : zakiansaar@oslab.khu.ac.kr.
 
 # 5. License
 
-Copyright [2016] [Jamil Hussain]
+Copyright [2018] [Jamil Hussain]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
