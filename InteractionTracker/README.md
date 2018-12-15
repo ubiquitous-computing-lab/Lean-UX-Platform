@@ -7,7 +7,7 @@
 --------------------------
 <!-- Update the list and the main body. -->
 
-This document describes how to get started using the UI/UX Authoring tool Tracking SDK for Android. UI/UX Authoring tool is open source UX engine that gives you valuable insights into your application user, and much more, so you can optimize your strategy and experience of your application user.
+This document describes how to get started using the Lean UX Engine having Interaction Tracker SDK for Android. Lean UX Engine having Interaction Tracker tool is open source UX engine module that gives you valuable insights into your application user, and much more, so you can optimize your strategy and experience of your application user.
 
 
 - [1. Interaction Tracker Android Tracking SDK](#1-uiux-authoring-tool-android-tracking-sdk)
