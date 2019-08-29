@@ -9,7 +9,7 @@ The LEAN UX platform provides an innovative way of evaluating the User experienc
 As a core component of the above-mentioned LeanUX platform, we develop a facial expression recognizer with high accuracy by using deep learning algorithms. Particularly, the core technology is the learning of an efficient Dual Neural Network (Spatial Covolutional Neural Network + Temporal Recurrent Neural Network) for tightly comibining high-level facial expression features in spatiotemporal domains to efficiently detect the ultimate emotions.
 
 The architecture of the FER component is manifested as follows
-[<img src="https://github.com/ubiquitous-computing-lab/Lean-UX-Platform/blob/master/fer/fer_architecture.png">](http://uclab.khu.ac.kr/LeanUX/)
+[<img src="https://github.com/ubiquitous-computing-lab/Lean-UX-Platform/blob/master/Video-based-Facial-Expression-Recognition/fer_architecture.png">](http://uclab.khu.ac.kr/LeanUX/)
 
 visit: [LeanUX](http://uclab.khu.ac.kr/LeanUX/) for more details of the LeanUX platform.
 
