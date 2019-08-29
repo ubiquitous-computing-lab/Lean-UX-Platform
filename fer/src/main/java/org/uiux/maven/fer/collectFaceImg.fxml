@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.CheckBox?>
+	
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.uiux.maven.fer.FEController">
+	<center>
+		<VBox alignment="CENTER">
+			<padding>
+				<Insets right="10" left="10" />
+			</padding>
+			<ImageView fx:id="originalFrame" />
+		</VBox>
+	</center>
+	<bottom>
+		<HBox alignment="CENTER">
+			<padding>
+				<Insets top="25" right="25" bottom="25" left="25" />
+			</padding>
+			<Button fx:id="cameraButton" alignment="center" text="Start camera" onAction="#startCamera" disable="false" />
+		</HBox>
+	</bottom>
+</BorderPane>
