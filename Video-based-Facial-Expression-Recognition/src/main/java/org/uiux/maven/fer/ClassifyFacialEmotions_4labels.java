@@ -126,7 +126,12 @@ public final class ClassifyFacialEmotions_4labels {
 	    }
   }
   
-
+/**
+ * max Index
+ * @param probabiities
+ *
+ * @return best
+ */
   static int maxIndex(float[] probabilities) {
     int best = 0;
     for (int i = 1; i < probabilities.length; ++i) {
