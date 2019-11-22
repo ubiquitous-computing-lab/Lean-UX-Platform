@@ -43,7 +43,12 @@ public final class ClassifyFacialEmotions_4labels {
               prediction[bestLabelIdx] * 100f));
     }
   }
-
+	
+/**
+ * construct And Execute Graph To Normalize Image
+ * @param imageBytes
+ *
+ */
   static Tensor<Float> constructAndExecuteGraphToNormalizeImage(byte[] imageBytes) {
     try (Graph g = new Graph()) {
       GraphBuilder b = new GraphBuilder(g);
@@ -79,6 +84,13 @@ public final class ClassifyFacialEmotions_4labels {
     }
   }
   
+/**
+ * execute FER Graph
+ * @param graphDef
+ * @param image
+ *
+ * @return object
+ */
   static Object[] executeFERGraph(byte[] graphDef, Tensor<Float> image) {
 	    try (Graph g = new Graph()) {
 	      g.importGraphDef(graphDef);
