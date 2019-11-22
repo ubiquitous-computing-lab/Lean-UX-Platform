@@ -141,7 +141,11 @@ public final class ClassifyFacialEmotions_4labels {
     }
     return best;
   }
-
+/**
+ * read all bytes or exit
+ * @param path
+ * @return byteArray
+ */
   static byte[] readAllBytesOrExit(Path path) {
     try {
       return Files.readAllBytes(path);
@@ -151,7 +155,13 @@ public final class ClassifyFacialEmotions_4labels {
     }
     return null;
   }
-
+	
+/**
+ * read all lines or exit
+ * @param path
+ * 
+ * return lines
+ */
   static List<String> readAllLinesOrExit(Path path) {
     try {
       return Files.readAllLines(path, Charset.forName("UTF-8"));
@@ -164,7 +174,7 @@ public final class ClassifyFacialEmotions_4labels {
 
   // In the fullness of time, equivalents of the methods of this class should be auto-generated from
   // the OpDefs linked into libtensorflow_jni.so. That would match what is done in other languages
-  // like Python, C++ and Go.
+  // like Python, C++ and Go.	
   static class GraphBuilder {
     GraphBuilder(Graph g) {
       this.g = g;
@@ -227,11 +237,26 @@ public final class ClassifyFacialEmotions_4labels {
     Output<Float> constant(String name, float value) {
       return this.constant(name, value, Float.class);
     }
-
+/**
+ * binary OP
+ *
+ * @param type
+ * @param in1
+ * @param in2
+ * @return <T>
+ */
     private <T> Output<T> binaryOp(String type, Output<T> in1, Output<T> in2) {
       return g.opBuilder(type, type).addInput(in1).addInput(in2).build().<T>output(0);
     }
 
+/**
+ * binary OP3
+ *
+ * @param type
+ * @param in1
+ * @param in2
+ * @return <T, U, V>
+ */
     private <T, U, V> Output<T> binaryOp3(String type, Output<U> in1, Output<V> in2) {
       return g.opBuilder(type, type).addInput(in1).addInput(in2).build().<T>output(0);
     }
