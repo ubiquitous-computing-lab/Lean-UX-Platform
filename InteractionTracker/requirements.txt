@@ -1,6 +1,6 @@
 certifi==2017.7.27.1
 chardet==3.0.4
-Django==1.11.6
+Django==1.11.29
 django-countries==5.0
 django-filter==1.1.0
 django-mathfilters==0.4.0
