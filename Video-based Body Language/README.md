@@ -1,4 +1,4 @@
-#Video-based Body Language detection using Kinect
+# Video-based Body Language detection using Kinect
 
 ## 1.1.	Introduction
 
@@ -12,10 +12,10 @@ Following are the main functionalities of the developed module:-
 -	Skeleton Capturing: User can sit or stand in front of Kinect Device, which captures the skeletal data for 15 upper body joints only.
 -	Frame per Second:  This software can be adaptive and work with variable frames depending on the requirements. For Lean UX platform we tested for 90 fps, 60 fps and 30 fps.
 -	Pre Processing: This software preprocesses the Skeletal joint data and extract features. The machine learning model is trained and persisted. Later on the model is used to classify individual frames in real-time for four type of emotions
-o	Joyful
-o	Sadness
-o	Neutral
-o	Anger
+  -	Joyful
+  - Sadness
+  -	Neutral
+  -	Anger
 
 ## 1.2.	Requirements
 -	Java version: JDK 1.8
@@ -25,24 +25,24 @@ o	Anger
 
 ## 1.3.	Installation
 
-•	Java and JDK setup JDK and JAVA_HOME
-o	Make sure JDK is installed, and “JAVA_HOME” variable is added as Windows environment variable
-o	Apache Maven Installation
-o	Download Apache Maven and install it
-o	Visit Maven official website, download the Maven zip file, for example : apache-maven-3.3.9-bin.zip. Unzip it to the folder you want to install Maven. (Assume you unzip to this folder – C:\Program Files\Apache\maven)
-o	Add MAVEN_HOME
-o	Add MAVEN_HOME variables in the Windows environment, and point it to your Maven folder.
-o	Add to PATH
-o	Update PATH variable, append Maven bin folder, so that you can run the Maven’s command everywhere.
-o	Verification by running mvn –version in the command prompt.
-•	Build Project
-o	Once you have Maven installed, verify with: mvn -version Then run (once) this to download all the necessary dependencies:
-o	Download src and pom file into the appropriate project folder
-o	Start Command Prompt
-o	Change the directory to your project directory and folder
-o	Run “mvn clean install” command
-o	You can import the project in Eclipse via File > Import... > Existing Projects into Workspace
-o	You can run mvn eclipse:eclipse to re-generate Eclipse .project and .classpath files automatically from your pom.xml file. 
+-Java and JDK setup JDK and JAVA_HOME
+  -Make sure JDK is installed, and “JAVA_HOME” variable is added as Windows environment variable
+  -	Apache Maven Installation
+  -	Download Apache Maven and install it
+  -	Visit Maven official website, download the Maven zip file, for example : apache-maven-3.3.9-bin.zip. Unzip it to the folder you want to install Maven. (Assume you unzip to this folder – C:\Program Files\Apache\maven)
+  -	Add MAVEN_HOME
+  -	Add MAVEN_HOME variables in the Windows environment, and point it to your Maven folder.
+  -	Add to PATH
+  -	Update PATH variable, append Maven bin folder, so that you can run the Maven’s command everywhere.
+  -	Verification by running mvn –version in the command prompt.
+-	Build Project
+  - once you have Maven installed, verify with: mvn -version Then run (once) this to download all the necessary dependencies:
+  - ownload src and pom file into the appropriate project folder
+  -	Start Command Prompt
+  - hange the directory to your project directory and folder
+  - Run “mvn clean install” command
+  - You can import the project in Eclipse via File > Import... > Existing Projects into Workspace
+  - You can run mvn eclipse:eclipse to re-generate Eclipse .project and .classpath files automatically from your pom.xml file. 
 
 ## 1.4.	Usage
 
