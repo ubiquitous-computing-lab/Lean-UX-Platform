@@ -12,6 +12,7 @@ Following are the main functionalities of the developed module:-
 -	Skeleton Capturing: User can sit or stand in front of Kinect Device, which captures the skeletal data for 15 upper body joints only.
 -	Frame per Second:  This software can be adaptive and work with variable frames depending on the requirements. For Lean UX platform we tested for 90 fps, 60 fps and 30 fps.
 -	Pre Processing: This software preprocesses the Skeletal joint data and extract features. The machine learning model is trained and persisted. Later on the model is used to classify individual frames in real-time for four type of emotions
+
   -	Joyful
   - Sadness
   -	Neutral
