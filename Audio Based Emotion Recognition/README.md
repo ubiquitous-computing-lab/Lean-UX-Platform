@@ -1,9 +1,9 @@
-#Audio-based Emotion Recognition
+# Audio-based Emotion Recognition
 
 ## 1.1.	Introduction
 
 This developed modules performs following tasks:-
--	Attached Microphone Sensor in PC: It is able to collect the voice data on the PC from USB type of the microphone sensor.
+* -	Attached Microphone Sensor in PC: It is able to collect the voice data on the PC from USB type of the microphone sensor.
 -	Signal Preprocessing: This module remove the silent terms with threshold value which is calculated with the noise-removed decibel. Following formula shows how to get decibel value.
 -	Feature Extraction: This module extracts the feature vector from the speech. this thesis employed various basic feature vector in existing methods of speech emotion recognition area.
 -	Classification: This module classifies emotions using Kstar algorithm in weka library with extracted feature vector from speech.
@@ -11,18 +11,18 @@ This developed modules performs following tasks:-
 -	Integrated with any platform: This software can be integrated with any platform measuring user’s experience or human behavior.
 Following are the main working flow of the developed module:-
 
-*1 - Audio Stream data is transferred from sensory data.
-*2 - Removing non-speech area in audio stream data
-*3 - Window based Segmentation by 3 sec using audio buffer.
-*4 - Extract Statistical Features based MFCC, LPC, Energy, Pitch
-*5 - Recognize Emotion by Kstar
+* 1 - Audio Stream data is transferred from sensory data.
+* 2 - Removing non-speech area in audio stream data
+* 3 - Window based Segmentation by 3 sec using audio buffer.
+* 4 - Extract Statistical Features based MFCC, LPC, Energy, Pitch
+* 5 - Recognize Emotion by Kstar
 
-**o	Joyful
-**o	Sadness
-**o	Neutral
-**o	Anger
+** o	Joyful
+** o	Sadness
+** o	Neutral
+** o	Anger
 
-##1.2.	Requirements
+## 1.2.	Requirements
 
 •	Java version: JDK 1.8
 •	Eclipse
@@ -30,7 +30,7 @@ Following are the main working flow of the developed module:-
 •	comirva-0.36.jar
 •	weka-3.7.0.jar
 
-##1.3.	Installation
+## 1.3.	Installation
 
 •	Java and JDK setup JDK and JAVA_HOME
 o	Make sure JDK is installed, and “JAVA_HOME” variable is added as Windows environment variable
@@ -40,7 +40,7 @@ o	Import the AudioBasedER Project
 o	Add the dependency libraries in lib folder (Project -> properties -> Java bulid Path -> Libraries -> Add JARs)
 o	Find the com.uclab.ER.audio.example package and run the AudioServiceExample.java
 
-##1.4.	Usage
+## 1.4.	Usage
 
 Once environment has been setup, you can easily run by java application from AudioServiceExample.java
 If you want to understand detailed thing please find the JAVA Doc.
