@@ -14,7 +14,7 @@ mock==1.3.0
 nltk==3.2.5
 olefile==0.44
 pbr==3.1.1
-Pillow==4.3.0
+Pillow==8.1.1
 PyAudio==0.2.11
 pypiwin32==220
 pyttsx3==2.6
