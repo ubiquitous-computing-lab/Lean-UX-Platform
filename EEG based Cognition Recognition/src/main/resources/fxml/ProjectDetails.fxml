@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1000.0" styleClass="custom-pane" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uclab.leanuxplatform.controllers.screens.ProjectDetailsController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="797.0">
+         <children>
+            <AnchorPane prefHeight="221.0" prefWidth="1000.0">
+               <children>
+                  <Label fx:id="projectTitle" layoutX="22.0" layoutY="24.0" prefHeight="52.0" prefWidth="592.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="535.0" layoutY="94.0" prefHeight="91.0" prefWidth="438.0">
+                     <children>
+                        <HBox prefHeight="52.0" prefWidth="344.0">
+                           <children>
+                              <Label fx:id="participantCount" prefHeight="29.0" prefWidth="286.0" text="-" textAlignment="CENTER" textFill="#fffafa" />
+                              <JFXButton fx:id="addParticipantButton" onAction="#addParticipantHandler" prefHeight="39.0" prefWidth="162.0" text="Add Participant" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label fx:id="taskCount" prefHeight="29.0" prefWidth="286.0" text="-" textAlignment="CENTER" textFill="#fffafa" />
+                              <VBox>
+                                 <children>
+                                    <JFXButton fx:id="newTask" onAction="#openNewTaskWindow" prefHeight="39.0" prefWidth="162.0" text="Create a new Task*" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ProgressIndicator fx:id="updateProgress" layoutX="936.0" layoutY="43.0" prefHeight="46.0" prefWidth="37.0" progress="0.0" style="-fx-background-color: #999999;" />
+                  <Accordion layoutX="22.0" layoutY="63.0" prefHeight="143.0" prefWidth="485.0">
+                    <panes>
+                      <TitledPane animated="false" expanded="false" prefHeight="106.0" prefWidth="485.0" style="-fx-background-color: #FFFF8D; -fx-border-color: #FFFF8D;" text="Descriptions" textFill="#0a0000">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="87.0" prefWidth="481.0" styleClass="box-background">
+                                 <children>
+                                    <Text fx:id="projectDescription" fill="WHITE" layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="410.0">
+                                       <font>
+                                          <Font name="Arial" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+                  <Label layoutX="784.0" layoutY="191.0" text="*uses the default web browser" textFill="#fcfafa">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="215.0" prefWidth="1000.0" stylesheets="@../styles/dark-theme.css">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="28.0" prefHeight="215.0" prefViewportWidth="947.0" prefWidth="949.0" stylesheets="@../styles/dark-theme.css">
+                     <content>
+                        <VBox fx:id="participantList" prefHeight="213.0" prefWidth="950.0" styleClass="box-background">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="188.0" prefWidth="1000.0">
+               <children>
+                  <ScrollPane layoutX="26.0" layoutY="26.0" prefHeight="165.0" prefWidth="949.0" vbarPolicy="NEVER">
+                     <content>
+                        <HBox fx:id="modalityList" prefHeight="163.0" prefWidth="947.0" spacing="10.0" styleClass="box-background">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding></HBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

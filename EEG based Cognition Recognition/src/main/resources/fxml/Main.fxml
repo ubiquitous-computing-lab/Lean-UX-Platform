@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" prefHeight="703.0" prefWidth="1000.0" styleClass="custom-pane" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uclab.leanuxplatform.controllers.screens.MainController">
+   <children>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" resizableOnDrag="true" resizeContent="true" styleClass="jfx-drawer" />
+      <AnchorPane fx:id="rootAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane maxHeight="697.0" maxWidth="1129.0" minHeight="0.0" minWidth="0.0" prefHeight="678.0" prefWidth="1129.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <JFXHamburger fx:id="hamburger" layoutX="1080.0" layoutY="-20.0" prefHeight="20.0" prefWidth="27.0" styleClass="jfx-hamburger-icon" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="-20.0" />
+                  <ScrollPane hbarPolicy="NEVER" layoutX="24.0" layoutY="118.0" prefHeight="520.0" prefWidth="952.0">
+                     <content>
+                        <VBox fx:id="listProjects" maxHeight="700.0" maxWidth="1112.0" minHeight="0.0" minWidth="0.0" prefHeight="518.0" prefWidth="950.0" styleClass="box-background">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <VBox alignment="TOP_CENTER" layoutX="755.0" layoutY="56.0" prefHeight="55.0" prefWidth="221.0">
+                     <children>
+                        <JFXButton fx:id="newProject" onAction="#openNewProjectWindow" prefHeight="39.0" prefWidth="217.0" text="Create a new project*">
+                           <graphic>
+                              <FontAwesomeIcon fill="#fffefe" iconName="PLUS_SQUARE" />
+                           </graphic>
+                        </JFXButton>
+                        <Label text="*uses the default web browser" textFill="#fcfafa">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label fx:id="projectCount" layoutX="412.0" layoutY="69.0" prefHeight="29.0" prefWidth="329.0" text="You don't have any projects yet." textAlignment="CENTER" textFill="#fffafa" />
+               </children>
+            </AnchorPane>
+            <MenuBar maxHeight="33.0" maxWidth="1078.0" minHeight="0.0" minWidth="0.0" prefHeight="33.0" prefWidth="1077.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleSettingMenu" text="Settings" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuClose" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Add">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAddParticipantMenu" text="Add Participant" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleAboutMenu" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
