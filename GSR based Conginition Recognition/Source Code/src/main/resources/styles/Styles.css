@@ -1,0 +1,20 @@
+.button {
+    -fx-font-weight: bold;
+}
+.text-field:error {
+  -fx-text-box-border: red ;
+  -fx-focus-color: red ;
+}
+.text-field:info {
+  -fx-text-box-border: green ;
+  -fx-focus-color: green ;
+}
+.label-info{
+    -fx-border-color:blue;
+    -fx-padding:2px;
+}
+.status-info{
+    -fx-padding:2px;
+    -fx-border-insets:5;
+    -fx-border-width:2;
+}

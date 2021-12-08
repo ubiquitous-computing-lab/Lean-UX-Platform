@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.khu.uclab.gsr.gsr_fx.FXMLController">
+    <children>
+        <Button fx:id="connect" layoutX="93.0" layoutY="14.0" onAction="#connectGsr" text="Connect GSR!" />
+        <Label fx:id="gsrState" layoutX="14.0" layoutY="429.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="725.0" styleClass="status-info" stylesheets="@../styles/Styles.css" />
+      <Button fx:id="disconnect" layoutX="632.0" layoutY="14.0" onAction="#disconnectGsr" text="Disconnect GSR!" />
+      <HBox layoutX="25.0" layoutY="136.0" prefHeight="72.0" prefWidth="700.0">
+         <children>
+            <Button fx:id="stressButton" mnemonicParsing="false" onAction="#stress" prefHeight="50.0" prefWidth="100.0" text="Stressed">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="Focused" mnemonicParsing="false" onAction="#focus" prefHeight="50.0" prefWidth="100.0" text="Focused">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="excitedButton" mnemonicParsing="false" onAction="#excite" prefHeight="50.0" prefWidth="100.0" text="Excited">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="interestButton" mnemonicParsing="false" onAction="#interest" prefHeight="50.0" prefWidth="100.0" text="Interested">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="relaxButton" mnemonicParsing="false" onAction="#relax" prefHeight="50.0" prefWidth="100.0" text="Relaxed">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="14.0" layoutY="115.0" prefHeight="17.0" prefWidth="440.0" text="I am feeling!" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="skinConductanceChart" layoutX="14.0" layoutY="218.0" prefHeight="211.0" prefWidth="349.0" title="Skin Conductance">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis autoRanging="false" side="LEFT" tickLabelGap="0.1" tickUnit="0.1" upperBound="5.0" />
+        </yAxis>
+      </LineChart>
+      <LineChart fx:id="skinResistanceChart" layoutX="386.0" layoutY="218.0" prefHeight="211.0" prefWidth="349.0" title="Skin Resistance">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <TextField fx:id="commPort" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="72.0" text="COMM6" />
+      <HBox layoutX="14.0" layoutY="56.0" prefHeight="32.0" prefWidth="725.0">
+         <children>
+            <Label fx:id="samplingRate" prefHeight="30.0" prefWidth="240.0" styleClass="label-info" stylesheets="@../styles/Styles.css" text="Sampling Rate:">
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="accelRange" prefHeight="30.0" prefWidth="240.0" styleClass="label-info" stylesheets="@../styles/Styles.css" text="Accel Range:">
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="gsrRange" prefHeight="30.0" prefWidth="240.0" styleClass="label-info" stylesheets="@../styles/Styles.css" text="GSR Range:">
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
