@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="1000.0" styleClass="custom-pane" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uclab.leanuxplatform.controllers.screens.FeedbackController">
+   <children>
+      <Pane fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="457.0" prefWidth="1000.0">
+         <children>
+            <Label fx:id="taskLabel" alignment="TOP_LEFT" layoutX="27.0" layoutY="14.0" prefHeight="53.0" prefWidth="950.0" style="-fx-font-weight: bold;" text="Task Name" textFill="WHITE" wrapText="true">
+                      <font>
+                          <Font name="Arial" size="16.0" />
+                      </font>
+                  </Label>
+             <Button layoutX="759.0" layoutY="398.0" mnemonicParsing="false" onAction="#submitButtonHandler" prefHeight="39.0" prefWidth="210.0" text="Submit">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <ScrollPane layoutX="25.0" layoutY="68.0" prefHeight="322.0" prefWidth="950.0">
+               <content>
+                  <VBox fx:id="surveyQuestions" prefHeight="320.0" prefWidth="948.0" styleClass="box-background">
+                  <Label fx:id="questionLabel" alignment="TOP_LEFT" layoutX="5.0" layoutY="2.0" prefHeight="80.0" prefWidth="939.0" text="Question?" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutX="8.0" layoutY="123.0" prefHeight="58.0" prefWidth="585.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="145.0">
+                           <children>
+                              <RadioButton fx:id="option_1" alignment="BOTTOM_LEFT" mnemonicParsing="false">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="optionsGroup" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="132.0" text="Strongly disagree" textAlignment="CENTER" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="97.0">
+                           <children>
+                              <RadioButton fx:id="option_2" alignment="BOTTOM_LEFT" mnemonicParsing="false" toggleGroup="$optionsGroup" />
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" text="Disagree" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="43.0" prefWidth="103.0">
+                           <children>
+                              <RadioButton fx:id="option_3" alignment="BOTTOM_LEFT" mnemonicParsing="false" toggleGroup="$optionsGroup" />
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="62.0" text="Neutral" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="84.0">
+                           <children>
+                              <RadioButton fx:id="option_4" alignment="BOTTOM_LEFT" mnemonicParsing="false" toggleGroup="$optionsGroup" />
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="73.0" text="Agree" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="111.0">
+                           <children>
+                              <RadioButton fx:id="option_5" alignment="BOTTOM_LEFT" mnemonicParsing="false" toggleGroup="$optionsGroup" />
+                              <Label prefHeight="35.0" prefWidth="94.0" text="Strongly Agree" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="feedbackResponseTextBox" layoutX="8.0" layoutY="191.0" prefHeight="131.0" prefWidth="566.0" promptText="Express your feeling ...">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     </TextArea>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

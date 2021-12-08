@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="132.0" prefWidth="116.0" style="-fx-background-color: #000000; -fx-background-radius: 10;" styleClass="modality-box" stylesheets="@../../styles/dark-theme.css" type="VBox" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <FontAwesomeIcon fx:id="iconName" fill="WHITE" iconName="USER" size="5em" textAlignment="CENTER" wrappingWidth="92.0" />
+      <Label fx:id="modalityName" alignment="CENTER" contentDisplay="CENTER" prefHeight="84.0" prefWidth="157.0" text="name" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="modalityStatus" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="157.0" text="Status" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font></Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</fx:root>

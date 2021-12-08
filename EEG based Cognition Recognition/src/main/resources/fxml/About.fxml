@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="247.0" prefWidth="525.0" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uclab.leanuxplatform.controllers.screens.AboutController">
+   <children>
+      <ImageView fitHeight="154.0" fitWidth="247.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="295.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="about-text" text="Version 4.0" textAlignment="CENTER" wrappingWidth="131.69921875">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <VBox spacing="5.0" />
+      <Text fill="WHITE" layoutX="226.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MIXED METHOD APPROACH FOR UX EVALUATION" />
+   </children>
+</AnchorPane>

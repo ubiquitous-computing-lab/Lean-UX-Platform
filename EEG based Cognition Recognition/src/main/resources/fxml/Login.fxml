@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="318.0" prefWidth="476.0" style="-fx-background-color: #2A2E37;" stylesheets="@../styles/dark-theme.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uclab.leanuxplatform.controllers.screens.LoginScreenController">
+    <children>
+        <Pane fx:id="mainContainer" layoutX="3.0" layoutY="138.0" prefHeight="166.0" prefWidth="470.0" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="138.0">
+            <children>
+                <Label fx:id="lblErrors" alignment="CENTER" layoutX="8.0" layoutY="95.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+                    <font>
+                        <Font name="Segoe UI" size="10.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnSignin" layoutX="92.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="137.0" text="Login" />
+            <Button fx:id="btnCancel" layoutX="248.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="137.0" text="Cancel" />
+            <FontAwesomeIcon fill="WHITE" iconName="USER" layoutX="55.0" layoutY="33.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" iconName="KEY" layoutX="53.0" layoutY="77.0" size="2em" />
+            <JFXTextField fx:id="txtUsername" focusColor="WHITE" layoutX="93.0" prefHeight="37.0" prefWidth="310.0" promptText="email" text="jamil@oslab.khu.ac.kr" unFocusColor="WHITE" />
+            <JFXPasswordField fx:id="txtPassword" focusColor="WHITE" layoutX="93.0" layoutY="40.0" prefHeight="37.0" prefWidth="310.0" promptText="password" text="admin@123" unFocusColor="WHITE" />
+            </children>
+        </Pane>
+      <FontAwesomeIcon fill="WHITE" iconName="LOCK" layoutX="240.0" layoutY="59.0" size="5em" />
+      <Label alignment="CENTER" layoutX="147.0" layoutY="65.0" prefHeight="23.0" prefWidth="225.0" text="Sign in to continue" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+          <Label alignment="CENTER" layoutX="129.0" layoutY="87.0" prefHeight="39.0" prefWidth="260.0" text="Lean UX Platform" textFill="WHITE">
+              <font>
+                  <Font name="Segoe UI Bold" size="27.0" />
+              </font>
+          </Label>
+    </children>
+</AnchorPane>

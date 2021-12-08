@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uclab.leanuxplatform.controllers.screens.SplashScreenController">
+   <children>
+      <Pane layoutX="-13.0" layoutY="-54.0" prefHeight="524.0" prefWidth="714.0" style="-fx-background-color: black;" styleClass="splash-backgroud" stylesheets="@../styles/Styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-13.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-54.0">
+         <children>
+            <Label layoutX="280.0" layoutY="394.0" text="Version 4.0" textFill="#fcf2f2">
+               <font>
+                  <Font name="Arial" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="361.0" layoutY="463.0" text="\@ 2020. Lean UX Platform. Mixed-method UX evaluation." textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="progress" layoutX="49.0" layoutY="417.0" prefHeight="20.0" prefWidth="115.0" text="Loading" textFill="#fcf9f9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="progressBar" layoutX="49.0" layoutY="447.0" minHeight="-Infinity" prefHeight="9.0" prefWidth="630.0" progress="0.0" style="-fx-background-color: #000000;" stylesheets="@../styles/Styles.css">
+               <effect>
+                  <Blend mode="SCREEN" />
+               </effect></ProgressBar>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

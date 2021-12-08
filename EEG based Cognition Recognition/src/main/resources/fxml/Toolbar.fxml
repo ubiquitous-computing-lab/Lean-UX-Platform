@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox layoutY="31.0" prefHeight="674.0" prefWidth="154.0" style="-fx-background-color: #2A2E37;" styleClass="..\styles\dark-theme.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uclab.leanuxplatform.controllers.screens.customcontrols.ToolbarController">
+         <children>
+            <JFXButton fx:id="btnDashboard" alignment="CENTER" contentDisplay="TOP" graphicTextGap="20.0" onAction="#handleButtonAction" prefHeight="400.0" prefWidth="154.0" styleClass="toolbar-button" text="Dashboard" textAlignment="RIGHT" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="TH_LARGE" size="30" styleClass="icons" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnsetting" alignment="CENTER" contentDisplay="TOP" graphicTextGap="20.0" onAction="#handleButtonAction" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="Setting" textAlignment="RIGHT" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="GEAR" size="30" styleClass="icons" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnabout" alignment="CENTER" contentDisplay="TOP" graphicTextGap="20.0" onAction="#handleButtonAction" prefHeight="400.0" prefWidth="225.0" styleClass="toolbar-button" text="About" textAlignment="RIGHT" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="GEAR" size="30" styleClass="icons" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnlogout" alignment="CENTER" contentDisplay="TOP" graphicTextGap="20.0" onAction="#handleButtonAction" prefHeight="400.0" prefWidth="225.0" styleClass="toolbar-button" text="Logout" textAlignment="RIGHT" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" iconName="EXTERNAL_LINK" size="30" styleClass="icons" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
