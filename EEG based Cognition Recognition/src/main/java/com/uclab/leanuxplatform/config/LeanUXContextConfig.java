@@ -75,12 +75,6 @@ public class LeanUXContextConfig {
         return pspc;
     }
     
-    @Bean
-    @DependsOn({"properties"})
-    public ApplicationProperties applicationProperties(){
-        return new ApplicationProperties();
-    }
-
     //Remote access beans
     @Bean
     public RestTemplate restTemplate() {
