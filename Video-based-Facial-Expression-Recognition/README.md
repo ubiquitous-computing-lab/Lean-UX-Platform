@@ -2,7 +2,6 @@
 [![Version](https://img.shields.io/badge/LeanUX--FER-version%203.0-green.svg)](http://uclab.khu.ac.kr/LeanUX/)
 [![License](https://img.shields.io/badge/Apache%20License%20-Version%202.0-yellowgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
-<!--The LEAN UX platform provides an innovative way of evaluating the User experience with the combined abilities of managing multi-modal, wide range of emotions, real-time synchronization, time spans based experience extraction, multi-device integration and powerful visualization-->
 
 The LEAN UX platform provides an innovative way of evaluating the User experience with the combined abilities of managing multi-modal, wide range of emotions, real-time synchronization, time spans based experience extraction, multi-device integration and powerful visualization. It objectifies the subjective nature of user in evaluating user experience through triangulation methods. UX experts are empowered through powerful real-time analytics visualization to get insight of time spans user experience.
 
