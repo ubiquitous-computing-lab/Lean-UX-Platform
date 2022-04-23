@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mainClass>com.uclab.leanuxplatform.MainApp</mainClass>
-        <spring.version>5.1.7.RELEASE</spring.version>
+        <spring.version>5.3.19</spring.version>
         <dl4j.version>0.9.1</dl4j.version>
         <tensorflow.version>1.14.0</tensorflow.version>
     </properties>
