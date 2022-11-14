@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mainClass>com.uclab.leanuxplatform.MainApp</mainClass>
-        <spring.version>5.1.7.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
         <dl4j.version>0.9.1</dl4j.version>
         <tensorflow.version>1.14.0</tensorflow.version>
     </properties>
@@ -173,7 +173,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.9</version>
+            <version>2.9.10.8</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -260,13 +260,13 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.2</version>
+            <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>2.3</version>
+            <version>2.17.1</version>
             <type>jar</type>
         </dependency>
         <dependency>
@@ -310,7 +310,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
-            <version>1.8.1</version>
+            <version>1.21</version>
         </dependency>
         
         <!-- JavaFX Themes-->
