@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.uclab</groupId>
+    <artifactId>AQG</artifactId>
+    <version>6.0</version>
+    <packaging>jar</packaging>
+
+    <name>Automatic Questionnaire Generator</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>5.1.7.RELEASE</spring.version>
+        <dl4j.version>0.9.1</dl4j.version>
+        <tensorflow.version>1.14.0</tensorflow.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>ops4j</id>
+            <url>http://repository.ops4j.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>weka</id>
+            <url>https://nexus.bedatadriven.com/content/repositories/public</url>
+        </repository>
+        <repository>
+            <id>tidalwave-opengl</id>
+            <url>http://services.tidalwave.it/nexus/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>clojar</id>
+            <url>http://clojars.org/repo/</url>
+        </repository>
+        <repository>
+            <id>shimmer-repo</id>
+            <url>https://shimmersensing.jfrog.io/artifactory/ShimmerAPI</url>
+        </repository>
+        
+        
+        
+    </repositories>
+    
+    <organization>
+        <!-- Used as the 'Vendor' for JNLP generation -->
+        <name>Ubiquitous Computing lab</name>
+        <url>uclab.khu.ac.kr</url>
+    </organization>
+
+    <build>
+        <plugins>
+            <!-- https://stackoverflow.com/questions/43398751/how-to-stop-maven-from-unpacking-on-every-project-run -->
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <excludeDefaultDirectories>true</excludeDefaultDirectories>
+                    <filesets>
+                        <!-- delete directories that will be generated when you 
+                             start the develpment server/client in eclipse  
+                        -->
+                        <fileset>
+                            <directory>target/classes</directory>
+                            <excludes>
+                                <exclude>**/*</exclude>
+                            </excludes>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>unpack-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <excludeScope>system</excludeScope>
+                            <excludeGroupIds>junit,org.mockito,org.hamcrest</excludeGroupIds>
+                            <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+<!--            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <id>unpack-dependencies</id>
+                        
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${java.home}/../bin/javapackager</executable>
+                            <arguments>
+                                <argument>-createjar</argument>
+                                <argument>-nocss2bin</argument>
+                                <argument>-appclass</argument>
+                                <argument>${mainClass}</argument>
+                                <argument>-srcdir</argument>
+                                <argument>${project.build.directory}/classes</argument>
+                                <argument>-outdir</argument>
+                                <argument>${project.build.directory}</argument>
+                                <argument>-outfile</argument>
+                                <argument>${project.build.finalName}.jar</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>default-cli</id>
+                        <goals>
+                            <goal>exec</goal>                            
+                        </goals>
+                        <configuration>
+                            <executable>${java.home}/bin/java</executable>
+                            <commandlineArgs>${runfx.args} -Xmx1048m -Xcheck:jni:verbose -Xdump:java:system:events=vmstop+user -Xtrace:trigger=method{java/lang/System.exit,javadump}  </commandlineArgs>
+                        </configuration>
+                    </execution>
+                </executions>  
+            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <bootclasspath>${sun.boot.class.path}${path.separator}${java.home}/lib/jfxrt.jar</bootclasspath>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <!--                    <forkCount>3</forkCount>
+                    <reuseForks>true</reuseForks>-->
+                    <argLine>-Xmx1048m -XX:-ReduceInitialCardMarks -Djava.library.path=${project.basedir}/libs -Xcheck:jni:verbose -Xdump:java:system:events=vmstop+user -Xtrace:trigger=method{java/lang/System.exit,javadump} </argLine>
+                    <additionalClasspathElements>
+                        <additionalClasspathElement>${java.home}/lib/jfxrt.jar</additionalClasspathElement>
+                        <additionalClasspathElement>${project.build.directory}/classes</additionalClasspathElement>
+                    </additionalClasspathElements>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>8.0.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx</artifactId>
+            <version>8.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/ -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.8.0-beta4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.8.0-beta4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+            <type>jar</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>8.40.15</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jogamp.gluegen</groupId>
+            <artifactId>gluegen-rt-main</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl-all-main</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.nativelibs4java</groupId>
+            <artifactId>bridj</artifactId>
+            <version>0.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.lightcouch</groupId>
+            <artifactId>lightcouch</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+       
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180130</version>
+            <type>jar</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.version}</version>
+            <type>jar</type>
+        </dependency>
+        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.3</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.2</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.2</version>
+            <type>jar</type>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
+
+        
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.8.1</version>
+        </dependency>
+        
+        
+        <!-- JavaFX Themes-->
+        <dependency>
+            <groupId>eu.hansolo</groupId>
+            <artifactId>tilesfx</artifactId>
+            <version>1.6.8</version>
+        </dependency>
+               
+        <dependency>
+            <groupId>eu.hansolo</groupId>
+            <artifactId>Medusa</artifactId>
+            <version>8.3</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.scream3r</groupId>
+            <artifactId>jssc</artifactId>
+            <version>2.8.0</version>
+            <type>jar</type>
+        </dependency>
+        
+        <!--        <dependency>
+            <groupId>com.emotiv.Iedk</groupId>
+            <artifactId>emotiv</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/emotiv-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>-->
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>8.40.15</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/weka/weka -->
+        <dependency>
+            <groupId>weka</groupId>
+            <artifactId>weka</artifactId>
+            <version>3.7.0</version>
+            <type>jar</type>
+        </dependency>
+        
+        <!--         <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl-all-natives-windows-amd64</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>gluegen-rt-natives-windows-amd64</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>dev.comirva</groupId>
+            <artifactId>comirva</artifactId>
+            <version>0.36</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>dev.jAudio</groupId>
+            <artifactId>jAudio</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.opencv</groupId>
+            <artifactId>opencv</artifactId>
+            <version>401</version>
+        </dependency>
+   
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>libtensorflow</artifactId>
+            <version>${tensorflow.version}</version>
+        </dependency>
+	
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>libtensorflow_jni</artifactId>
+            <version>${tensorflow.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>proto</artifactId>
+            <version>${tensorflow.version}</version>
+        </dependency>
+
+        <!-- Screen Recorder Dependencies -->
+        <dependency>
+            <groupId>org.jcodec</groupId>
+            <artifactId>jcodec</artifactId>
+            <version>0.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jcodec</groupId>
+            <artifactId>jcodec-javase</artifactId>
+            <version>0.2.3</version>
+        </dependency>
+                
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>${dl4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.nd4j</groupId>
+                    <artifactId>nd4j-native</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- GSR Dependencies -->
+        <dependency>
+            <groupId>javax.microedition</groupId>
+            <artifactId>cldc</artifactId>
+            <version>1.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/cldc-1.1.jar</systemPath>
+        </dependency>
+        <dependency> 
+            <groupId>com.shimmerresearch.pcdriver</groupId> 
+            <artifactId>ShimmerDriverPC</artifactId> 
+            <version>0.9.3beta</version>
+            <type>jar</type>
+             <exclusions>
+                <exclusion>
+                    <groupId>javax.microedition</groupId>
+                    <artifactId>cldc</artifactId>
+                </exclusion>
+            </exclusions> 
+        </dependency>
+        
+        <dependency>
+            <groupId>com.shimmerresearch.driver</groupId>
+            <artifactId>ShimmerDriver</artifactId>
+            <version>0.9.121beta</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.shimmerresearch.managers.bluetoothmanager</groupId>
+            <artifactId>ShimmerBluetoothManager</artifactId>
+            <version>0.9.34beta</version>
+            <type>jar</type>
+        </dependency>
+        
+    </dependencies>
+
+</project>
