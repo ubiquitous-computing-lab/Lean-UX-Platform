@@ -1,0 +1,100 @@
+{
+  "rules": [
+	{
+		"ruleID":"81937",
+		"ruleConclusion":"I am feeling annoyed with confusing UI to complete the task",
+		"conditionList":[
+			{
+				"conditionKey":"emotional_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"anger",
+				"conditionType":"String"
+			},
+			{
+				"conditionKey":"cognitive_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"stress",
+				"conditionType":"String"
+			},
+			{
+				"conditionKey":"performance_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"fail",
+				"conditionType":"String"
+			}
+		],
+		"conclusionList":[
+			{
+				"conclusionKey":"LikertScale",
+				"conclusionValue":"I am feeling annoyed with confusing UI to complete the task",
+				"conclusionOperator":"="
+			}
+		]
+	},
+	{
+		"ruleID":"15224",
+		"ruleConclusion":"I am feeling happy with simple UI to complete the task",
+		"conditionList":[
+			{
+				"conditionKey":"emotional_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"happy",
+				"conditionType":"String"
+			},
+			{
+				"conditionKey":"cognitive_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"excitement",
+				"conditionType":"String"
+			},
+			{
+				"conditionKey":"performance_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"pass",
+				"conditionType":"String"
+			}
+		],
+		"conclusionList":[
+			{
+				"conclusionKey":"binary",
+				"conclusionValue":"I am feeling happy with simple UI to complete the task",
+				"conclusionOperator":"="
+			}
+		]
+	},
+{
+		"ruleID":"81938",
+		"ruleConclusion":"I am feeling consumed with complicated UI to complete the task",
+		"conditionList":[
+			{
+				"conditionKey":"emotional_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"excitement",
+				"conditionType":"String"
+			},
+			{
+				"conditionKey":"cognitive_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"focus",
+				"conditionType":"String"
+			},
+			{
+				"conditionKey":"performance_state",
+				"conditionValueOperator":"=",
+				"conditionValue":"fail",
+				"conditionType":"String"
+			}
+		],
+		"conclusionList":[
+			{
+				"conclusionKey":"LikertScale",
+				"conclusionValue":"I am feeling consumed with complicated UI to complete the task",
+				"conclusionOperator":"="
+			}
+		]
+	}
+
+
+
+]
+}

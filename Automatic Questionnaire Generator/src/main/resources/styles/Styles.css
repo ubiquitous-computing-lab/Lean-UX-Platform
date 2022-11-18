@@ -1,0 +1,75 @@
+.splash-backgroud{
+
+    -fx-background-image:url("../images/Splash.png");
+}
+
+
+.button {
+    -fx-font-weight: bold;
+}
+
+.progress-bar{
+
+    -fx-background-color: #000; 
+}
+
+label{
+    -fx-font: 14px Arial;
+    color: #FFF;
+    -fx-text-fill: white;
+}
+
+.progress-bar .bar {
+    -fx-background-color:
+        -fx-box-border,
+        linear-gradient(to bottom, derive(-fx-accent,95%), derive(-fx-accent,10%)),
+        red; /* this line is the background color of the bar */
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em; /* 5 */
+}
+
+
+.button
+{
+    -fx-background-color : #FFF;
+    -fx-border-color: #355ECE;
+    -fx-text-fill:  #0C3988;
+}
+.button:hover
+{
+    -fx-background-color : #355ECE ;
+    -fx-text-fill:  #FFF;
+}
+.button:pressed
+{
+    -fx-background-color : #0C39FF ;
+    -fx-text-fill: #FFF;
+}
+
+.button2
+{
+    -fx-background-color :  #0C39FF;
+    -fx-border-color: #FFF;
+    -fx-text-fill:  #FFF;
+}
+.button2:hover
+{
+    -fx-background-color : #0C3988 ;
+    -fx-text-fill:   #FFF;
+}
+.button2:pressed
+{
+    -fx-background-color : #0C3400 ;
+    -fx-text-fill: #FFF;
+}
+
+.closeBtn:hover{
+    
+    color:  #a91b24;
+}
+
+.modality-box
+{
+    margin: 10px;
+    
+}

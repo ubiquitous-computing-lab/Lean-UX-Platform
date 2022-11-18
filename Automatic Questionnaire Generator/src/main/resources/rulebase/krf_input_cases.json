@@ -1,0 +1,9 @@
+{
+    "inputCaseBase":[
+        {
+            "emotional_state":["anger"],
+            "cognitive_state":["stress"],
+            "performance_state":["fail"]
+        }
+    ]
+}
