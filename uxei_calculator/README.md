@@ -1,5 +1,7 @@
 # User Experience Evaluation Index (UXEI) Calculator
 
+
+
 ## Overview
 
 This repository contains the code for calculating the User Experience Evaluation Index (UXEI), a comprehensive metric designed to evaluate user experience based on various factors such as emotions, sentiments, EEG data, and task success rates. The UXEI provides a quantitative measure to gauge user satisfaction and engagement, making it a valuable tool for UX researchers and developers.
@@ -51,5 +53,5 @@ Contributions to improve the UXEI calculator are welcome. Please follow these st
 4. Push to the branch (git push origin feature-branch).
 5. Create a new Pull Request.
 
-## License
-This project is licensed under the Apache 2 
+# License
+The code is licensed under the [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
