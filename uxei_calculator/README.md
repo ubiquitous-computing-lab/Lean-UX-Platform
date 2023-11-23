@@ -20,16 +20,16 @@ To use this project, clone the repository and install the necessary dependencies
     git https://github.com/ubiquitous-computing-lab/Lean-UX-Platform/tree/master/uxei_calculator
 
     cd uxei-calculator
-
+```
 
 ## Usage
 To run the UXEI calculator, use the following command:
 
 ```python 
- python uxei_calculator.py
+    python uxei_calculator.py
+```
 
-
-Make sure to update uxei_calculator.py with your specific data inputs.
+Make sure to update uxei_calculator.py with your specific data inputs. 
 
 
 ## Data Format
