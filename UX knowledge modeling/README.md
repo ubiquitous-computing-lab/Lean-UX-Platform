@@ -1,4 +1,4 @@
-# UX Modeling Project
+# UX Modeling
 
 ## Overview
 It utilizes advanced natural language processing techniques to analyze sentiment and extract key UX aspects from unstructured review text.It employs several Python scripts to scrape, preprocess, analyze, and model topics from app reviews to understand user sentiment and key areas of interest.
