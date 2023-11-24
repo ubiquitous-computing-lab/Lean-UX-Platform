@@ -61,5 +61,5 @@ Contributions to improve the UXEI calculator are welcome. Please follow these st
 4. Push to the branch (git push origin feature-branch).
 5. Create a new Pull Request.
 
-# License
+## License
 The code is licensed under the [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
