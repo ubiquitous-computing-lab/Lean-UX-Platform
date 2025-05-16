@@ -1,7 +1,5 @@
 # Realtime UX Data Collection Platform
 
-![UX Measurement Platform](https://via.placeholder.com/1200x400?text=UX+Measurement+Platform)
-
 A comprehensive platform for collecting, analyzing, and visualizing user experience data in real-time using specialized AI agents.
 
 ## 🚀 Features
@@ -21,59 +19,3 @@ A comprehensive platform for collecting, analyzing, and visualizing user experie
 - **A/B Testing Integration**: Compare UX metrics across different designs
 - **Collaborative Workspaces**: Share insights with team members
 - **Custom Report Templates**: Create standardized reports for consistency
-
-## 📋 Table of Contents
-
-- [Installation](#installation)
-  - [Prerequisites](#prerequisites)
-  - [Basic Setup](#basic-setup)
-  - [Advanced Configuration](#advanced-configuration)
-  - [Docker Installation](#docker-installation)
-- [Usage](#usage)
-  - [Data Collection](#data-collection)
-  - [AI Agents](#ai-agents)
-  - [Reports](#reports)
-  - [Projects](#projects)
-  - [Admin Dashboard](#admin-dashboard)
-  - [System Details](#system-details)
-- [API Documentation](#api-documentation)
-  - [Authentication](#authentication)
-  - [Data Collection API](#data-collection-api)
-  - [Reports API](#reports-api)
-  - [Projects API](#projects-api)
-  - [Agents API](#agents-api)
-- [Project Structure](#project-structure)
-- [Technologies](#technologies)
-- [Deployment](#deployment)
-  - [Vercel Deployment](#vercel-deployment)
-  - [Self-Hosted Deployment](#self-hosted-deployment)
-  - [Environment Variables](#environment-variables)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-  - [Development Workflow](#development-workflow)
-  - [Code Style](#code-style)
-  - [Testing](#testing)
-  - [Pull Request Process](#pull-request-process)
-- [Changelog](#changelog)
-- [Security](#security)
-- [FAQ](#faq)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
-
-## 🔧 Installation
-
-### Prerequisites
-
-- Node.js 18.0.0 or higher
-- npm or yarn
-- Git
-- PostgreSQL (for production deployments)
-- Redis (for caching and real-time features)
-
-### Basic Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/ux-measurement.git
-   cd ux-measurement
